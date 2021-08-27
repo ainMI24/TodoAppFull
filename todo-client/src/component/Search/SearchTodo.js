@@ -16,7 +16,7 @@ function SearchTodo (){
 
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const {loading, error, data} = useQuery(LOAD_NOTES);
+  const {loading, error, data} = useQuery(LOAD_NOTES, {pollInterval: 500});
 
   useEffect(() => {
     if (!loading) {
