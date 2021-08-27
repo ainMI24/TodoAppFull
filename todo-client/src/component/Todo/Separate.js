@@ -1,5 +1,6 @@
 import {useQuery, gql} from '@apollo/client';
 import React, { useEffect, useState } from "react";
+import './Separate.css'
 
 const LOAD_NOTES = gql`
   query Query {
@@ -33,15 +34,18 @@ function Separate() {
     console.log(error);
   
     return (
-    <div>
-     <div>
-        {" "}
-        {notes.map((val) => {
-            if (val.status) {
-              return <p> {val.todo}</p>;
-          }
-        })}
-     </div>
+    <div className={"separateelement"}>
+      <div> 
+        <div>
+          <h1>Completed</h1>
+            {" "}
+            {notes.map((val) => {
+                if (val.status) {
+                  return <p> {val.todo}</p>;
+              }
+            })}
+        </div>
+     </div> 
     </div>
       
     );

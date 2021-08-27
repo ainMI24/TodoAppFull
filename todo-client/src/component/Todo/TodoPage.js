@@ -179,24 +179,17 @@ function TodoPage() {
 
   
   return (
-
     <body className="todo__body">
-      <h1 className="todo__heading">Todo GraphQL</h1>
-      <form className="todo__input-form">
-      
-        <label className="todo__input-title"></label>
-        <input className="todo__input-box" onChange={handleInputChange} onKeyDown={handleKeyPress}
-          placeholder="What needs to be done" />
-
-        <button className="todo__input-button" onClick={handleButtonClick}>Add Todo Item</button>
-       
-      </form>
-      <
-// @ts-ignore
-      SearchTodo/>
-      <Separate/>
-      <Todos todoArray={todoArray} markComplete={markComplete} delTodo={delTodo} />
-
+        <h1 className="todo__heading">Todo GraphQL</h1>
+        <form className="todo__input-form">
+          <label className="todo__input-title"></label>
+          <input className="todo__input-box" onChange={handleInputChange} onKeyDown={handleKeyPress}
+            placeholder="What needs to be done" />
+          <button className="todo__input-button" onClick={handleButtonClick}>Add Todo Item</button>
+        </form>
+        <Todos todoArray={todoArray} markComplete={markComplete} delTodo={delTodo} />
+        <SearchTodo/>
+        <Separate/>
     </body>
   );
 }
